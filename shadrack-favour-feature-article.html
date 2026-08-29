@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>From Circuits to Code — Shadrack Favour</title>
+  <meta name="description" content="The engineering journey of Shadrack Favour, an Electrical & Software Systems Engineer building at the intersection of electrical engineering, software systems and artificial intelligence.">
+  <meta name="author" content="Shadrack Favour">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="From Circuits to Code: The Engineering Journey of Shadrack Favour">
+  <meta property="og:description" content="Building at the intersection of electrical engineering, software systems and artificial intelligence.">
+  <meta property="og:site_name" content="Shadrack Favour">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "From Circuits to Code: The Engineering Journey of Shadrack Favour",
+    "description": "Building at the intersection of electrical engineering, software systems and artificial intelligence.",
+    "author": {
+      "@type": "Person",
+      "name": "Shadrack Favour",
+      "jobTitle": "Electrical & Software Systems Engineer"
+    },
+    "articleSection": [
+      "Electrical Engineering",
+      "Software Systems",
+      "Artificial Intelligence",
+      "Technology Entrepreneurship"
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #f7f7f5;
+      --surface: #ffffff;
+      --text: #111111;
+      --muted: #686868;
+      --line: #ddddda;
+      --accent: #111111;
+      --max: 920px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+    }
+
+    ::selection {
+      background: #111;
+      color: #fff;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 5vw;
+      background: rgba(247,247,245,.88);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(0,0,0,.07);
+    }
+
+    .brand {
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    .back {
+      color: var(--text);
+      text-decoration: none;
+      font-size: .82rem;
+      font-weight: 600;
+    }
+
+    .article {
+      width: min(var(--max), 90%);
+      margin: 0 auto;
+    }
+
+    .hero {
+      padding: 110px 0 80px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 24px;
+      font-size: .75rem;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    h1 {
+      max-width: 880px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3rem, 8vw, 6.5rem);
+      line-height: .98;
+      letter-spacing: -.055em;
+      font-weight: 500;
+    }
+
+    .dek {
+      max-width: 680px;
+      margin-top: 32px;
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .byline {
+      display: flex;
+      gap: 18px;
+      align-items: center;
+      margin-top: 42px;
+      font-size: .85rem;
+    }
+
+    .byline strong {
+      font-weight: 750;
+    }
+
+    .dot {
+      width: 4px;
+      height: 4px;
+      background: var(--text);
+      border-radius: 50%;
+    }
+
+    .content {
+      padding: 72px 0 120px;
+    }
+
+    .content p {
+      max-width: 720px;
+      margin: 0 auto 25px;
+      font-size: 1.08rem;
+    }
+
+    .content .lead {
+      font-size: 1.45rem;
+      line-height: 1.55;
+      margin-bottom: 50px;
+    }
+
+    .content em {
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    h2 {
+      max-width: 720px;
+      margin: 90px auto 30px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.1;
+      letter-spacing: -.035em;
+      font-weight: 500;
+    }
+
+    .section-intro {
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .statement {
+      max-width: 720px;
+      margin: 42px auto;
+      padding: 28px 0 28px 28px;
+      border-left: 3px solid var(--accent);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      line-height: 1.35;
+    }
+
+    .stack {
+      max-width: 720px;
+      margin: 25px auto;
+    }
+
+    .stack div {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+      font-weight: 650;
+    }
+
+    .closing {
+      margin-top: 95px;
+      padding: 70px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .closing h2 {
+      margin: 0 auto 32px;
+    }
+
+    .closing-quote {
+      max-width: 720px;
+      margin: 0 auto;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      line-height: 1.3;
+    }
+
+    .signature {
+      max-width: 720px;
+      margin: 42px auto 0;
+      font-size: .95rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 35px 5vw;
+      text-align: center;
+      color: var(--muted);
+      font-size: .8rem;
+    }
+
+    @media (max-width: 650px) {
+      .topbar {
+        padding: 16px 5%;
+      }
+
+      .hero {
+        padding: 75px 0 55px;
+      }
+
+      .content {
+        padding-top: 50px;
+      }
+
+      .content p {
+        font-size: 1rem;
+      }
+
+      .statement {
+        padding-left: 20px;
+      }
+
+      h2 {
+        margin-top: 65px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="topbar">
+    <div class="brand">Shadrack Favour</div>
+    <a class="back" href="/">← Personal Website</a>
+  </header>
+
+  <main class="article">
+
+    <section class="hero">
+      <span class="eyebrow">Engineering • Software • AI</span>
+
+      <h1>From Circuits to Code: The Engineering Journey of Shadrack Favour</h1>
+
+      <p class="dek">
+        Building at the intersection of electrical engineering, software systems
+        and artificial intelligence.
+      </p>
+
+      <div class="byline">
+        <strong>Shadrack Favour</strong>
+        <span class="dot"></span>
+        <span>Electrical &amp; Software Systems Engineer</span>
+      </div>
+    </section>
+
+    <article class="content">
+
+      <p class="lead">
+        There is a point in an engineer's journey when the question changes.
+      </p>
+
+      <div class="statement">
+        It is no longer simply, <em>“How does this system work?”</em><br><br>
+        It becomes:<br><br>
+        <strong>“What can I build with what I know?”</strong>
+      </div>
+
+      <p>
+        For <strong>Shadrack Favour</strong>, that question has shaped a journey
+        from electrical engineering into software development, artificial
+        intelligence and systems thinking.
+      </p>
+
+      <p>
+        An <strong>Electrical &amp; Software Systems Engineer</strong>, Favour
+        represents a growing generation of engineers who are not choosing
+        between hardware and software, but exploring what becomes possible
+        when both worlds are brought together.
+      </p>
+
+      <p>His story begins with electrical engineering.</p>
+
+      <p><strong>But it does not end there.</strong></p>
+
+
+      <h2>The Foundation: Electrical Engineering</h2>
+
+      <p>
+        Favour earned his <strong>Bachelor's degree in Electrical Engineering
+        from Moi University</strong>, establishing the technical foundation
+        that continues to influence how he approaches technology.
+      </p>
+
+      <p>
+        Electrical engineering teaches something that extends beyond circuits,
+        power systems and electronics: <strong>systems thinking</strong>.
+      </p>
+
+      <p>
+        A component rarely exists in isolation.
+      </p>
+
+      <p>
+        A circuit depends on other circuits. A control system depends on
+        feedback. A power system depends on reliability and coordination.
+        An embedded system brings hardware and computation together.
+      </p>
+
+      <p>
+        The discipline therefore demands an understanding of how individual
+        parts interact to produce a functioning whole.
+      </p>
+
+      <p>
+        That way of thinking became one of the foundations for Favour's broader
+        technological journey.
+      </p>
+
+      <p>
+        His engineering background includes exposure to areas such as
+        <strong>embedded systems, power electronics and FPGA-based projects</strong>,
+        giving him experience across different layers of modern electronic systems.
+      </p>
+
+      <p>But as technology evolved, another layer increasingly captured his attention.</p>
+
+      <p><strong>Software.</strong></p>
+
+
+      <h2>When Engineering Met Software</h2>
+
+      <p>
+        Moving into software was not about leaving electrical engineering behind.
+      </p>
+
+      <p><strong>It was about expanding the engineering toolbox.</strong></p>
+
+      <p>
+        Software offered something fundamentally different: the ability to
+        create systems that could be rapidly developed, deployed, connected
+        and continuously improved.
+      </p>
+
+      <p>
+        Favour began exploring web development and software systems, developing
+        an understanding of how digital products are designed around users,
+        information and processes.
+      </p>
+
+      <p>The transition created a useful combination.</p>
+
+      <div class="stack">
+        <div>Electrical engineering provided the systems foundation.</div>
+        <div>Software provided the digital interface.</div>
+        <div>And together they created a broader engineering perspective.</div>
+      </div>
+
+      <p>
+        Rather than seeing programming as simply learning how to write code,
+        Favour increasingly approached software as another medium through
+        which engineering problems could be solved.
+      </p>
+
+      <p>
+        That distinction has become central to his professional identity.
+      </p>
+
+
+      <h2>Beyond Coding: Thinking in Systems</h2>
+
+      <p class="section-intro">
+        There is a difference between writing software and engineering a system.
+      </p>
+
+      <p><strong>Code is only one component.</strong></p>
+
+      <p>
+        A complete system requires architecture, data, interfaces, security,
+        usability, scalability and an understanding of the environment in
+        which the technology will operate.
+      </p>
+
+      <p>This systems perspective increasingly informs Favour's work.</p>
+
+      <p>
+        His projects have explored areas including
+        <strong>web applications, AI-powered tools, digital platforms and
+        automation-oriented solutions</strong>.
+      </p>
+
+      <p>
+        The objective is not technology for its own sake.
+      </p>
+
+      <p>
+        It is to understand a real problem and determine whether technology
+        can make the process more intelligent, efficient or accessible.
+      </p>
+
+      <p>
+        That mindset has also influenced the development of his personal
+        digital portfolio, where engineering, software and emerging technologies
+        are presented as connected parts of the same professional journey.
+      </p>
+
+
+      <h2>Enter Artificial Intelligence</h2>
+
+      <p>
+        Artificial intelligence represents the next significant layer of
+        Favour's technological exploration.
+      </p>
+
+      <p>
+        AI is powerful because it changes what software can do.
+      </p>
+
+      <p>
+        Traditional software generally follows predefined instructions.
+      </p>
+
+      <p>
+        AI introduces systems capable of identifying patterns, processing
+        complex information and supporting decisions in ways that were
+        previously difficult to automate.
+      </p>
+
+      <p>For an engineer, this creates an exciting intersection.</p>
+
+      <div class="stack">
+        <div>Electrical systems generate data.</div>
+        <div>Software processes it.</div>
+        <div>Artificial intelligence can interpret it.</div>
+        <div>Automation can act on it.</div>
+      </div>
+
+      <p>
+        Together, these technologies can form intelligent systems.
+      </p>
+
+      <p>
+        This is the space Favour is increasingly interested in exploring.
+      </p>
+
+      <p>
+        His work with AI applications, including experimentation with
+        <strong>computer vision and face detection</strong>, reflects an
+        interest in moving beyond theoretical knowledge toward working technology.
+      </p>
+
+      <p>
+        The larger objective is not simply to say that AI is the future.
+      </p>
+
+      <p><strong>It is to understand how AI can become useful infrastructure.</strong></p>
+
+
+      <h2>Technology Should Solve Something</h2>
+
+      <p>
+        One principle sits behind Favour's approach to technology:
+      </p>
+
+      <div class="statement">
+        <strong>A good technological solution begins with a real problem.</strong>
+      </div>
+
+      <p>
+        Africa does not lack problems that technology could potentially address.
+      </p>
+
+      <div class="stack">
+        <div>There are inefficiencies in business processes.</div>
+        <div>Fragmented information systems.</div>
+        <div>Manual workflows.</div>
+        <div>Infrastructure challenges.</div>
+        <div>Limited access to sophisticated digital tools.</div>
+        <div>Opportunities for automation across industries.</div>
+      </div>
+
+      <p>The challenge is not simply building another application.</p>
+
+      <p>
+        It is identifying where technology can create genuine value.
+      </p>
+
+      <p>
+        This is where the combination of engineering and software becomes
+        particularly powerful.
+      </p>
+
+      <div class="stack">
+        <div>An engineer can examine a problem as a system.</div>
+        <div>A software developer can turn the solution into a digital product.</div>
+        <div>AI can potentially make that product more intelligent.</div>
+        <div>And entrepreneurship can take the solution beyond a prototype and toward scale.</div>
+      </div>
+
+      <p>
+        That intersection increasingly defines Favour's direction.
+      </p>
+
+
+      <h2>Building with Africa in Mind</h2>
+
+      <p>
+        Favour's technological ambition is closely connected to the
+        opportunities emerging across Africa.
+      </p>
+
+      <p>
+        The continent is experiencing rapid digital transformation, but many
+        sectors still operate with systems that were never designed for
+        today's scale of information, connectivity and automation.
+      </p>
+
+      <p><strong>That creates an enormous engineering opportunity.</strong></p>
+
+      <p>
+        The next generation of African technology does not necessarily need
+        to copy solutions built elsewhere.
+      </p>
+
+      <p><strong>It can be designed around African realities.</strong></p>
+
+      <div class="stack">
+        <div>Different infrastructure.</div>
+        <div>Different markets.</div>
+        <div>Different constraints.</div>
+        <div>Different user behaviour.</div>
+        <div>Different opportunities.</div>
+      </div>
+
+      <div class="statement">
+        What can African engineers build when they stop thinking only about
+        participating in technology and start thinking about creating it?
+      </div>
+
+      <p>
+        That question is increasingly relevant to his own ambitions.
+      </p>
+
+
+      <h2>From Engineer to Builder</h2>
+
+      <p>
+        Technical knowledge is only the beginning.
+      </p>
+
+      <p><strong>The larger ambition is to become a builder.</strong></p>
+
+      <p>
+        Favour's long-term interests include
+        <strong>artificial intelligence, automation, SaaS and technology
+        entrepreneurship</strong>.
+      </p>
+
+      <p>
+        This means thinking beyond individual applications toward products
+        and systems that can solve problems repeatedly and at scale.
+      </p>
+
+      <p>It also means learning the disciplines surrounding technology:</p>
+
+      <div class="stack">
+        <div>Product thinking.</div>
+        <div>User experience.</div>
+        <div>Business models.</div>
+        <div>Data.</div>
+        <div>Security.</div>
+        <div>Infrastructure.</div>
+        <div>Leadership.</div>
+        <div>And ultimately, the ability to turn an idea into something people can actually use.</div>
+      </div>
+
+      <p>
+        The transition from engineer to technology entrepreneur therefore
+        represents another stage of the journey.
+      </p>
+
+      <p>The question evolves once again.</p>
+
+      <div class="statement">
+        <strong>“Can I build it?”</strong><br><br>
+        becomes<br><br>
+        <strong>“Should it exist, who needs it, and how far can it go?”</strong>
+      </div>
+
+
+      <h2>The Engineer of Tomorrow</h2>
+
+      <p>
+        The boundaries between engineering disciplines are becoming
+        increasingly fluid.
+      </p>
+
+      <p>
+        An engineer may work with sensors in the morning, cloud infrastructure
+        in the afternoon and machine-learning models in the evening.
+      </p>
+
+      <p>
+        Hardware can communicate with software.
+      </p>
+
+      <p>
+        Software can interact with intelligent models.
+      </p>
+
+      <p>
+        AI can influence automated systems.
+      </p>
+
+      <p>
+        And data can connect everything together.
+      </p>
+
+      <p>
+        This emerging environment requires engineers who can understand
+        multiple layers of a technological ecosystem.
+      </p>
+
+      <p>
+        That is the professional space Favour is deliberately building toward.
+      </p>
+
+      <div class="statement">
+        <strong>Electrical &amp; Software Systems Engineer</strong> is more
+        than a title.<br><br>
+        It represents a philosophy.
+      </div>
+
+      <div class="stack">
+        <div>Understand the physical system.</div>
+        <div>Understand the digital system.</div>
+        <div>Understand the intelligence layer.</div>
+        <div>Then understand how they work together.</div>
+      </div>
+
+
+      <h2>Still Building</h2>
+
+      <p>Favour's journey is far from complete.</p>
+
+      <p>
+        There is no single project that defines the destination.
+      </p>
+
+      <p>
+        Instead, each project, experiment and technical challenge becomes
+        another opportunity to learn, build and refine the larger vision.
+      </p>
+
+      <p>
+        The ambition is ultimately not to be known simply as an electrical
+        engineer.
+      </p>
+
+      <p>
+        Nor merely as a software developer.
+      </p>
+
+      <p>
+        Nor simply as someone interested in artificial intelligence.
+      </p>
+
+      <p>
+        It is to become an engineer capable of moving across these domains
+        and using them together to create meaningful technology.
+      </p>
+
+      <div class="stack">
+        <div>Technology that solves problems.</div>
+        <div>Technology that scales.</div>
+        <div>Technology that can contribute to Africa's digital future.</div>
+      </div>
+
+
+      <section class="closing">
+        <h2>Engineering What Comes Next</h2>
+
+        <p>
+          The future will not belong exclusively to hardware engineers,
+          software developers or AI specialists.
+        </p>
+
+        <p>
+          Increasingly, it will belong to people capable of understanding
+          how these disciplines connect.
+        </p>
+
+        <p>
+          That is the direction Shadrack Favour is pursuing.
+        </p>
+
+        <div class="stack">
+          <div>From circuits to code.</div>
+          <div>From code to intelligent systems.</div>
+          <div>From individual projects to scalable solutions.</div>
+          <div>And ultimately, from engineering technology to building companies around it.</div>
+        </div>
+
+        <p>
+          The journey is still unfolding.
+        </p>
+
+        <div class="closing-quote">
+          <strong>“Don't just understand how systems work. Build systems that make the world work better.”</strong>
+        </div>
+
+        <div class="signature">
+          <strong>Shadrack Favour</strong><br>
+          <em>Electrical &amp; Software Systems Engineer</em>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    © 2026 Shadrack Favour · Electrical &amp; Software Systems Engineer
+  </footer>
+
+</body>
+</html>
