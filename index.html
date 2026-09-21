@@ -5,24 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>From Circuits to Code — Shadrack Favour</title>
-  <meta name="description" content="The engineering journey of Shadrack Favour; me, an Electrical & Software Systems Engineer building at the intersection of electrical engineering, software systems and artificial intelligence.">
+  <meta name="description" content="Explore Shadrack Favour's journey as an Electrical &amp; Software Systems Engineer, connecting electrical engineering, software and artificial intelligence.">
   <meta name="author" content="Shadrack Favour">
+  <link rel="canonical" href="https://shadrackarticle.vercel.app/">
 
   <meta property="og:type" content="article">
-  <meta property="og:title" content="From Circuits to Code: The Engineering Journey of Shadrack Favour">
+  <meta property="og:title" content="From Circuits to Code: My Engineering Journey as Shadrack Favour">
   <meta property="og:description" content="Building at the intersection of electrical engineering, software systems and artificial intelligence.">
   <meta property="og:site_name" content="Shadrack Favour">
+  <meta property="og:url" content="https://shadrackarticle.vercel.app/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="From Circuits to Code — Shadrack Favour">
+  <meta name="twitter:description" content="Building at the intersection of electrical engineering, software systems and artificial intelligence.">
 
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "From Circuits to Code: The Engineering Journey of Shadrack Favour",
+    "@id": "https://shadrackarticle.vercel.app/#article",
+    "url": "https://shadrackarticle.vercel.app/",
+    "mainEntityOfPage": "https://shadrackarticle.vercel.app/",
+    "inLanguage": "en",
+    "headline": "From Circuits to Code: My Engineering Journey as Shadrack Favour",
     "description": "Building at the intersection of electrical engineering, software systems and artificial intelligence.",
     "author": {
       "@type": "Person",
       "name": "Shadrack Favour",
-      "jobTitle": "Electrical & Software Systems Engineer"
+      "jobTitle": "Electrical & Software Systems Engineer",
+      "url": "https://shadrackweb.vercel.app"
     },
     "articleSection": [
       "Electrical Engineering",
@@ -32,6 +42,14 @@
     ]
   }
   </script>
+
+  <!-- Web Analytics must be enabled for this project in Vercel. -->
+  <script>
+    window.va = window.va || function () {
+      (window.vaq = window.vaq || []).push(arguments);
+    };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>
 
   <style>
     :root {
@@ -54,6 +72,29 @@
       scroll-behavior: smooth;
     }
 
+    a:focus-visible {
+      outline: 3px solid #0066cc;
+      outline-offset: 4px;
+    }
+
+    .skip-link {
+      position: fixed;
+      top: -100px;
+      left: 5vw;
+      z-index: 20;
+      padding: 10px 16px;
+      background: var(--surface);
+      color: var(--text);
+    }
+
+    .skip-link:focus {
+      top: 12px;
+    }
+
+    #main-content {
+      scroll-margin-top: 6rem;
+    }
+
     body {
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
                    "Segoe UI", sans-serif;
@@ -72,6 +113,8 @@
       top: 0;
       z-index: 10;
       display: flex;
+      flex-wrap: wrap;
+      gap: 8px 20px;
       justify-content: space-between;
       align-items: center;
       padding: 18px 5vw;
@@ -133,7 +176,8 @@
 
     .byline {
       display: flex;
-      gap: 18px;
+      flex-wrap: wrap;
+      gap: 8px 18px;
       align-items: center;
       margin-top: 42px;
       font-size: .85rem;
@@ -144,6 +188,7 @@
     }
 
     .dot {
+      flex-shrink: 0;
       width: 4px;
       height: 4px;
       background: var(--text);
@@ -267,12 +312,12 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  height: 42px;
+  min-height: 44px;
   padding: 0 28px;
   font-size: 0.95rem;
   font-weight: 600;
   border-radius: 8px;
-  background-color: #0066cc; /* Adjust to match brand hex */
+  background-color: #0066cc;
   color: #ffffff;
   text-decoration: none;
   transition: background-color 0.2s ease, transform 0.15s ease;
@@ -283,22 +328,37 @@
   background-color: #0052a3;
   transform: translateY(-1px);
 }
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .portfolio-btn {
+    transition: none;
+  }
+
+  .portfolio-btn:hover {
+    transform: none;
+  }
+}
 </style>
 </head>
 
 <body>
+  <a class="skip-link" href="#main-content">Skip to article</a>
 
   <header class="topbar">
     <div class="brand">Shadrack Favour</div>
-    <a class="back" href="/">← Personal Website</a>
+    <a class="back" href="https://shadrackweb.vercel.app" data-portfolio-link="header">← Personal Website</a>
   </header>
 
-  <main class="article">
+  <main class="article" id="main-content" tabindex="-1" aria-labelledby="article-title">
 
     <section class="hero">
       <span class="eyebrow">Engineering • Software • AI</span>
 
-      <h1>From Circuits to Code: My Engineering Journey as Shadrack Favour</h1>
+      <h1 id="article-title">From Circuits to Code: My Engineering Journey as Shadrack Favour</h1>
 
       <p class="dek">
         Building at the intersection of electrical engineering, software systems
@@ -307,7 +367,7 @@
 
       <div class="byline">
         <strong>Shadrack Favour</strong>
-        <span class="dot"></span>
+        <span class="dot" aria-hidden="true"></span>
         <span>Electrical &amp; Software Systems Engineer</span>
       </div>
     </section>
@@ -331,7 +391,7 @@
       </p>
 
       <p>
-        An <strong>Electrical &amp; Software Systems Engineer</strong>, I
+        As an <strong>Electrical &amp; Software Systems Engineer</strong>, I
         represent a growing generation of engineers who are not choosing
         between hardware and software, but exploring what becomes possible
         when both worlds are brought together.
@@ -347,7 +407,7 @@
       <p>
         I earned my <strong>Bachelor's degree in Electrical Engineering
         from Moi University</strong>, establishing the technical foundation
-        that continues to influence how i approache technology.
+        that continues to influence how I approach technology.
       </p>
 
       <p>
@@ -458,13 +518,9 @@
 
       <p>
         That mindset has also influenced the development of my personal
-        digital portfolio <a
-  href="https://shadrackweb.vercel.app"
-  target="_self"
-  rel="noopener noreferrer"
-  class="portfolio-btn">
-  View My Portfolio
-</a>, where engineering, software and emerging technologies
+        digital portfolio <a href="https://shadrackweb.vercel.app"
+          class="portfolio-btn" data-portfolio-link="article">View My Portfolio</a>,
+        where engineering, software and emerging technologies
         are presented as connected parts of the same professional journey.
       </p>
 
@@ -504,7 +560,7 @@
       </p>
 
       <p>
-        This is the space that i'm increasingly interested in exploring.
+        This is the space that I'm increasingly interested in exploring.
       </p>
 
       <p>
@@ -602,7 +658,7 @@
       </div>
 
       <p>
-        That question is increasingly relevant to his own ambitions.
+        That question is increasingly relevant to my own ambitions.
       </p>
 
 
@@ -615,7 +671,7 @@
       <p><strong>The larger ambition is to become a builder.</strong></p>
 
       <p>
-        As it is always, my long-term interests include
+        My long-term interests include
         <strong>artificial intelligence, automation, SaaS and technology
         entrepreneurship</strong>.
       </p>
@@ -686,7 +742,7 @@
       </p>
 
       <p>
-        That is the professional space that i'm deliberately building toward.
+        That is the professional space that I'm deliberately building toward.
       </p>
 
       <div class="statement">
@@ -755,7 +811,7 @@
         </p>
 
         <p>
-          That is the direction <strong><i>Shadrack Favour</i></strong> is pursuing.
+          That is the direction I am pursuing.
         </p>
 
         <div class="stack">
@@ -786,5 +842,22 @@
     © 2026 Shadrack Favour · Electrical &amp; Software Systems Engineer
   </footer>
 
+  <script>
+    // Vercel custom events require a Pro or Enterprise plan.
+    // Record only the link placement; normal navigation never waits for analytics.
+    document.querySelectorAll('[data-portfolio-link]').forEach(function (link) {
+      function trackPortfolioClick(event) {
+        if (event.type === 'auxclick' && event.button !== 1) return;
+        if (typeof window.va !== 'function') return;
+        window.va('event', {
+          name: 'View My Portfolio',
+          data: { placement: link.dataset.portfolioLink }
+        });
+      }
+
+      link.addEventListener('click', trackPortfolioClick);
+      link.addEventListener('auxclick', trackPortfolioClick);
+    });
+  </script>
 </body>
 </html>
